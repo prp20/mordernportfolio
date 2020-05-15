@@ -12,7 +12,7 @@
         width: 28px;
         height: 3px;
         margin-bottom: 5px;
-        background: white;
+        background: set-text-color(#fff);
         @include easeOut;
     }
 
@@ -39,7 +39,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.8;
+    opacity: 1.0;
     visibility: hidden;
 
     &.show {
@@ -109,7 +109,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300px;
-        color: #fff;
+        color: set-text-color(#fff);
         text-decoration: none;
         @include easeOut;
 
@@ -122,29 +122,5 @@
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.05s;
-    }
-}
-
-@mixin mediaSm {
-    @media screen and (max-width:500px) {
-        @content;
-    }
-}
-
-@mixin mediaMd {
-    @media screen and (max-width:768px) {
-        @content;
-    }
-}
-
-@mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width:1170px) {
-        @content;
-    }
-}
-
-@mixin mediaXl {
-    @media screen and (min-width:1171px) {
-        @content;
     }
 }
